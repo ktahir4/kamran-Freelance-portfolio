@@ -49,6 +49,8 @@ a{
   color:inherit
 }
 
+/* NAV */
+
 .nav{
   height:76px;
   display:flex;
@@ -74,6 +76,8 @@ a{
 .navlinks a:hover{
   color:var(--text)
 }
+
+/* HERO */
 
 .hero{
   padding:82px 0 92px;
@@ -127,6 +131,8 @@ a{
   object-position:center top
 }
 
+/* SECTIONS */
+
 .section{
   padding:78px 0
 }
@@ -163,6 +169,8 @@ a{
   text-transform:uppercase
 }
 
+/* GRID / CARDS */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -176,6 +184,8 @@ a{
   overflow:hidden;
   box-shadow:0 8px 35px rgba(17,24,39,.045)
 }
+
+/* LOCAL VIDEO PROJECTS */
 
 .media{
   position:relative;
@@ -255,7 +265,9 @@ a{
   color:var(--accent2)
 }
 
-/* FEATURED YOUTUBE PROJECT */
+/* FEATURED YOUTUBE PROJECT
+   ONLY THIS YOUTUBE THUMBNAIL PRESENTATION IS CHANGED
+*/
 
 .featured{
   display:grid;
@@ -270,15 +282,15 @@ a{
 
 .featured .thumb{
   background:#111;
-  align-self:stretch;
-  min-height:100%;
+  aspect-ratio:16/9;
   overflow:hidden
 }
 
 .featured .thumb img{
   width:100%;
   height:100%;
-  object-fit:contain;
+  object-fit:cover;
+  object-position:center;
   display:block
 }
 
@@ -300,6 +312,8 @@ a{
   color:var(--muted);
   font-size:16px
 }
+
+/* STATS */
 
 .stats{
   display:flex;
@@ -424,6 +438,8 @@ a{
   gap:20px
 }
 
+/* TABLET */
+
 @media(max-width:900px){
 
   .hero,
@@ -452,8 +468,9 @@ a{
   .navlinks{
     gap:18px
   }
-
 }
+
+/* MOBILE */
 
 @media(max-width:620px){
 
@@ -524,8 +541,8 @@ a{
     display:block;
     margin-top:8px
   }
-
 }
+
 </style>
 </head>
 
@@ -552,7 +569,6 @@ KAMRAN TAHIR
 
 <main id="top">
 
-
 <!-- HERO -->
 
 <section class="container hero">
@@ -573,7 +589,6 @@ AI-powered UGC ads, product commercials, cinematic documentaries and short-form 
 
 </div>
 
-
 <div class="hero-photo">
 
 <img
@@ -584,7 +599,6 @@ alt="Kamran Tahir — AI Video Creator and Video Editor"
 </div>
 
 </section>
-
 
 
 <!-- WORK -->
@@ -614,8 +628,7 @@ A selection of AI-powered commercial, advertising and storytelling work created 
 </div>
 
 
-
-<!-- FEATURED — YOUTUBE 1 -->
+<!-- FEATURED YOUTUBE 1 -->
 
 <div class="featured">
 
@@ -684,7 +697,6 @@ Watch Project →
 <div class="grid">
 
 
-
 <!-- UGC AD -->
 
 <article class="card">
@@ -722,17 +734,14 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 </p>
 
 <div class="meta">
-
 <span class="pill">UGC Ads</span>
 <span class="pill">Short-form</span>
 <span class="pill">AI Video</span>
-
 </div>
 
 </div>
 
 </article>
-
 
 
 <!-- AI COMMERCIAL -->
@@ -772,17 +781,14 @@ A commercial-style AI production built around cinematic product and lifestyle vi
 </p>
 
 <div class="meta">
-
 <span class="pill">Product Ads</span>
 <span class="pill">Commercial</span>
 <span class="pill">AI Video</span>
-
 </div>
 
 </div>
 
 </article>
-
 
 
 <!-- MUSIC VIDEO -->
@@ -822,17 +828,14 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 </p>
 
 <div class="meta">
-
 <span class="pill">AI Video</span>
 <span class="pill">Music Video</span>
 <span class="pill">Advertising</span>
-
 </div>
 
 </div>
 
 </article>
-
 
 
 <!-- YOUTUBE 2 -->
@@ -898,7 +901,6 @@ Watch Project →
 </article>
 
 
-
 <!-- YOUTUBE 3 -->
 
 <article class="card">
@@ -931,24 +933,18 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 <div class="stats">
 
 <div class="stat">
-
 <strong>17K+</strong>
 <span>VIEWS</span>
-
 </div>
 
 <div class="stat">
-
 <strong>3.8K</strong>
 <span>WATCH HOURS</span>
-
 </div>
 
 <div class="stat">
-
 <strong>140+</strong>
 <span>SUBSCRIBERS</span>
-
 </div>
 
 </div>
@@ -966,7 +962,6 @@ Watch Project →
 </div>
 
 </article>
-
 
 
 <!-- AI HORROR -->
@@ -1006,11 +1001,9 @@ A short AI-generated horror story combining atmospheric visuals, character scene
 </p>
 
 <div class="meta">
-
 <span class="pill">Storytelling</span>
 <span class="pill">AI Generation</span>
 <span class="pill">Editing</span>
-
 </div>
 
 </div>
@@ -1023,7 +1016,6 @@ A short AI-generated horror story combining atmospheric visuals, character scene
 </div>
 
 </section>
-
 
 
 <!-- SERVICES -->
@@ -1113,7 +1105,6 @@ Reels, Shorts and creative AI stories designed for social platforms.
 </section>
 
 
-
 <!-- ABOUT -->
 
 <section class="section alt" id="about">
@@ -1153,7 +1144,6 @@ My work spans AI UGC advertising, product commercials, cinematic documentaries, 
 </div>
 
 </section>
-
 
 
 <!-- WORKFLOW -->
@@ -1216,7 +1206,6 @@ A streamlined AI production workflow focused on quality, consistency and profess
 
 </section>
 
-
 </main>
 
 
@@ -1235,7 +1224,6 @@ AI Video Creator • Video Editor
 </footer>
 
 </div>
-
 
 </body>
 </html>
