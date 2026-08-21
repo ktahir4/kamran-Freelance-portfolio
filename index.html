@@ -7,104 +7,539 @@
 <title>Kamran Tahir — AI Video Creator & Video Editor</title>
 
 <style>
-:root{--bg:#fff;--surface:#f8f8fb;--surface2:#f3f1ff;--text:#111827;--muted:#667085;--border:#e7e7ee;--accent:#6d4aff;--accent2:#7c3aed;--dark:#111827;--shadow:0 18px 55px rgba(17,24,39,.08)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
-.container{max-width:1160px;margin:auto;padding:0 24px}
-a{text-decoration:none;color:inherit}
-
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
-.brand{font-weight:850;letter-spacing:-.04em;font-size:20px}
-.navlinks{display:flex;gap:26px;color:#596273;font-size:14px;font-weight:650}
-.navlinks a:hover{color:var(--text)}
-.navcta{background:var(--dark);color:#fff;padding:11px 17px;border-radius:9px;font-size:14px;font-weight:750}
-
-.hero{padding:82px 0 92px;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
-.eyebrow{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
-.hero h1{font-size:clamp(46px,6.2vw,76px);line-height:.98;letter-spacing:-.065em;margin:17px 0 22px}
-.hero h1 span{color:var(--accent)}
-.hero p{font-size:19px;color:var(--muted);max-width:690px;margin:0 0 28px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:9px;font-weight:800;font-size:14px}
-.btn.primary{background:var(--dark);color:#fff}
-.btn.secondary{border:1px solid var(--border);background:#fff}
-.hero-photo{justify-self:end;width:min(370px,100%);border-radius:24px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#f1f1f4}
-.hero-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:center top}
-
-.section{padding:78px 0}
-.section.alt{background:var(--surface)}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}
-.section-head h2{font-size:38px;letter-spacing:-.045em;margin:7px 0 0}
-.section-head p{color:var(--muted);max-width:600px;margin:0}
-.label{font-size:12px;font-weight:850;color:var(--accent);letter-spacing:.13em;text-transform:uppercase}
-
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.card{background:#fff;border:1px solid var(--border);border-radius:17px;overflow:hidden;box-shadow:0 8px 35px rgba(17,24,39,.045)}
-.media{position:relative;background:#111;overflow:hidden}
-.media img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
-.media.vertical{max-width:440px;margin:auto}
-.media.vertical img{aspect-ratio:9/16}
-.media video{width:100%;display:block;max-height:650px;background:#0b0b0e}
-.media.video-horizontal video{aspect-ratio:16/9;object-fit:cover}
-.cardbody{padding:22px}
-.cardbody h3{font-size:24px;letter-spacing:-.03em;margin:6px 0 8px}
-.cardbody p{color:var(--muted);margin:0 0 15px}
-.meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
-.pill{font-size:12px;font-weight:750;background:var(--surface2);color:#5b43c7;padding:7px 10px;border-radius:999px}
-
-.featured{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
-.featured .thumb{background:#111}
-.featured .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.featured-body{padding:34px;display:flex;flex-direction:column;justify-content:center}
-.featured-body h3{font-size:34px;line-height:1.08;letter-spacing:-.045em;margin:8px 0 14px}
-.featured-body p{color:var(--muted);font-size:16px}
-
-.stats{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
-.stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
-.stat strong{display:block;font-size:22px;letter-spacing:-.03em}
-.stat span{font-size:11px;color:var(--muted);font-weight:700}
-
-.servicegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.service{border:1px solid var(--border);border-radius:14px;padding:21px;background:#fff}
-.service strong{display:block;margin-bottom:6px}
-.service p{margin:0;color:var(--muted);font-size:14px}
-
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
-.about-photo{border-radius:20px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
-.about-photo img{width:100%;display:block}
-.about h2{font-size:42px;line-height:1.05;letter-spacing:-.05em;margin:8px 0 18px}
-.about p{color:var(--muted);font-size:17px}
-
-.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.step{position:relative;padding:20px;border:1px solid var(--border);border-radius:14px;background:#fff}
-.step b{display:block;font-size:12px;color:var(--accent);margin-bottom:8px}
-.step span{font-weight:800}
-
-.footer{padding:34px 0;color:#8a91a0;font-size:13px;display:flex;justify-content:space-between;gap:20px}
-
-@media(max-width:900px){
-.hero,.featured,.about{grid-template-columns:1fr}
-.hero-photo{justify-self:start;width:300px}
-.servicegrid{grid-template-columns:repeat(2,1fr)}
-.workflow{grid-template-columns:1fr 1fr}
-.featured-body{padding:26px}
-.navlinks{display:none}
+:root{
+--bg:#fff;
+--surface:#f8f8fb;
+--surface2:#f3f1ff;
+--text:#111827;
+--muted:#667085;
+--border:#e7e7ee;
+--accent:#6d4aff;
+--accent2:#7c3aed;
+--dark:#111827;
+--shadow:0 18px 55px rgba(17,24,39,.08)
 }
 
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:var(--bg);
+color:var(--text);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+line-height:1.5
+}
+
+.container{
+max-width:1160px;
+margin:auto;
+padding:0 24px
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+/* NAVIGATION */
+
+.nav{
+height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid var(--border)
+}
+
+.brand{
+font-weight:850;
+letter-spacing:-.04em;
+font-size:20px
+}
+
+.navlinks{
+display:flex;
+gap:26px;
+color:#596273;
+font-size:14px;
+font-weight:650
+}
+
+.navlinks a:hover{
+color:var(--text)
+}
+
+.navcta{
+background:var(--dark);
+color:#fff;
+padding:11px 17px;
+border-radius:9px;
+font-size:14px;
+font-weight:750
+}
+
+/* HERO */
+
+.hero{
+padding:82px 0 92px;
+display:grid;
+grid-template-columns:1.25fr .75fr;
+gap:70px;
+align-items:center
+}
+
+.eyebrow{
+font-size:13px;
+font-weight:800;
+letter-spacing:.14em;
+color:var(--accent);
+text-transform:uppercase
+}
+
+.hero h1{
+font-size:clamp(46px,6.2vw,76px);
+line-height:.98;
+letter-spacing:-.065em;
+margin:17px 0 22px
+}
+
+.hero h1 span{
+color:var(--accent)
+}
+
+.hero p{
+font-size:19px;
+color:var(--muted);
+max-width:690px;
+margin:0 0 28px
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 19px;
+border-radius:9px;
+font-weight:800;
+font-size:14px
+}
+
+.btn.primary{
+background:var(--dark);
+color:#fff
+}
+
+.btn.secondary{
+border:1px solid var(--border);
+background:#fff
+}
+
+.hero-photo{
+justify-self:end;
+width:min(370px,100%);
+border-radius:24px;
+overflow:hidden;
+border:1px solid var(--border);
+box-shadow:var(--shadow);
+background:#f1f1f4
+}
+
+.hero-photo img{
+width:100%;
+display:block;
+aspect-ratio:4/5;
+object-fit:cover;
+object-position:center top
+}
+
+/* SECTIONS */
+
+.section{
+padding:78px 0
+}
+
+.section.alt{
+background:var(--surface)
+}
+
+.section-head{
+display:flex;
+justify-content:space-between;
+align-items:end;
+gap:30px;
+margin-bottom:30px
+}
+
+.section-head h2{
+font-size:38px;
+letter-spacing:-.045em;
+margin:7px 0 0
+}
+
+.section-head p{
+color:var(--muted);
+max-width:600px;
+margin:0
+}
+
+.label{
+font-size:12px;
+font-weight:850;
+color:var(--accent);
+letter-spacing:.13em;
+text-transform:uppercase
+}
+
+/* PROJECT GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px
+}
+
+.card{
+background:#fff;
+border:1px solid var(--border);
+border-radius:17px;
+overflow:hidden;
+box-shadow:0 8px 35px rgba(17,24,39,.045)
+}
+
+.media{
+position:relative;
+background:#111;
+overflow:hidden
+}
+
+.media img{
+width:100%;
+display:block;
+aspect-ratio:16/9;
+object-fit:cover
+}
+
+.media.vertical{
+max-width:440px;
+margin:auto
+}
+
+.media.vertical img{
+aspect-ratio:9/16
+}
+
+.media video{
+width:100%;
+display:block;
+max-height:650px;
+background:#0b0b0e
+}
+
+.media.video-horizontal video{
+aspect-ratio:16/9;
+object-fit:cover
+}
+
+.cardbody{
+padding:22px
+}
+
+.cardbody h3{
+font-size:24px;
+letter-spacing:-.03em;
+margin:6px 0 8px
+}
+
+.cardbody p{
+color:var(--muted);
+margin:0 0 15px
+}
+
+.meta{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin:14px 0
+}
+
+.pill{
+font-size:12px;
+font-weight:750;
+background:var(--surface2);
+color:#5b43c7;
+padding:7px 10px;
+border-radius:999px
+}
+
+/* FEATURED PROJECT */
+
+.featured{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:26px;
+background:#fff;
+border:1px solid var(--border);
+border-radius:20px;
+overflow:hidden;
+box-shadow:var(--shadow)
+}
+
+.featured .thumb{
+background:#111;
+aspect-ratio:16/9;
+overflow:hidden;
+align-self:start
+}
+
+.featured .thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+display:block
+}
+
+.featured-body{
+padding:34px;
+display:flex;
+flex-direction:column;
+justify-content:center
+}
+
+.featured-body h3{
+font-size:34px;
+line-height:1.08;
+letter-spacing:-.045em;
+margin:8px 0 14px
+}
+
+.featured-body p{
+color:var(--muted);
+font-size:16px
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin:20px 0
+}
+
+.stat{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:12px;
+padding:12px 14px
+}
+
+.stat strong{
+display:block;
+font-size:22px;
+letter-spacing:-.03em
+}
+
+.stat span{
+font-size:11px;
+color:var(--muted);
+font-weight:700
+}
+
+/* SERVICES */
+
+.servicegrid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px
+}
+
+.service{
+border:1px solid var(--border);
+border-radius:14px;
+padding:21px;
+background:#fff
+}
+
+.service strong{
+display:block;
+margin-bottom:6px
+}
+
+.service p{
+margin:0;
+color:var(--muted);
+font-size:14px
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:.8fr 1.2fr;
+gap:70px;
+align-items:center
+}
+
+.about-photo{
+border-radius:20px;
+overflow:hidden;
+border:1px solid var(--border);
+box-shadow:var(--shadow)
+}
+
+.about-photo img{
+width:100%;
+display:block
+}
+
+.about h2{
+font-size:42px;
+line-height:1.05;
+letter-spacing:-.05em;
+margin:8px 0 18px
+}
+
+.about p{
+color:var(--muted);
+font-size:17px
+}
+
+/* WORKFLOW */
+
+.workflow{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px
+}
+
+.step{
+position:relative;
+padding:20px;
+border:1px solid var(--border);
+border-radius:14px;
+background:#fff
+}
+
+.step b{
+display:block;
+font-size:12px;
+color:var(--accent);
+margin-bottom:8px
+}
+
+.step span{
+font-weight:800
+}
+
+/* FOOTER */
+
+.footer{
+padding:34px 0;
+color:#8a91a0;
+font-size:13px;
+display:flex;
+justify-content:space-between;
+gap:20px
+}
+
+/* TABLET */
+
+@media(max-width:900px){
+
+.hero,
+.featured,
+.about{
+grid-template-columns:1fr
+}
+
+.hero-photo{
+justify-self:start;
+width:300px
+}
+
+.servicegrid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.workflow{
+grid-template-columns:1fr 1fr
+}
+
+.featured-body{
+padding:26px
+}
+
+.navlinks{
+display:none
+}
+
+}
+
+/* MOBILE */
+
 @media(max-width:620px){
-.container{padding:0 17px}
-.hero{padding:55px 0 65px;gap:35px}
-.hero h1{font-size:48px}
-.hero p{font-size:17px}
-.section{padding:60px 0}
-.section-head{display:block}
-.section-head h2{font-size:32px}
-.grid{grid-template-columns:1fr}
-.servicegrid,.workflow{grid-template-columns:1fr}
-.hero-photo{width:100%;max-width:330px}
-.footer{display:block}
-.footer span{display:block;margin-top:8px}
+
+.container{
+padding:0 17px
+}
+
+.hero{
+padding:55px 0 65px;
+gap:35px
+}
+
+.hero h1{
+font-size:48px
+}
+
+.hero p{
+font-size:17px
+}
+
+.section{
+padding:60px 0
+}
+
+.section-head{
+display:block
+}
+
+.section-head h2{
+font-size:32px
+}
+
+.grid{
+grid-template-columns:1fr
+}
+
+.servicegrid,
+.workflow{
+grid-template-columns:1fr
+}
+
+.hero-photo{
+width:100%;
+max-width:330px
+}
+
+.footer{
+display:block
+}
+
+.footer span{
+display:block;
+margin-top:8px
+}
+
 }
 </style>
 </head>
@@ -115,15 +550,21 @@ a{text-decoration:none;color:inherit}
 
 <nav class="nav">
 
-<a class="brand" href="#top">KAMRAN TAHIR</a>
+<a class="brand" href="#top">
+KAMRAN TAHIR
+</a>
 
 <div class="navlinks">
+
 <a href="#work">Work</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
+
 </div>
 
-<a class="navcta" href="#work">View Work</a>
+<a class="navcta" href="#work">
+View Work
+</a>
 
 </nav>
 
@@ -132,13 +573,20 @@ a{text-decoration:none;color:inherit}
 
 <main id="top">
 
+<!-- HERO -->
+
 <section class="container hero">
 
 <div>
 
-<div class="eyebrow">AI VIDEO CREATOR • VIDEO EDITOR</div>
+<div class="eyebrow">
+AI VIDEO CREATOR • VIDEO EDITOR
+</div>
 
-<h1>I turn ideas into <span>high-impact video.</span></h1>
+<h1>
+I turn ideas into
+<span>high-impact video.</span>
+</h1>
 
 <p>
 AI-powered UGC ads, product commercials, cinematic documentaries and short-form storytelling — created with AI generation and professional editing.
@@ -146,23 +594,32 @@ AI-powered UGC ads, product commercials, cinematic documentaries and short-form 
 
 <div class="buttons">
 
-<a class="btn primary" href="#work">View My Work ↓</a>
+<a class="btn primary" href="#work">
+View My Work ↓
+</a>
 
-<a class="btn secondary" href="#services">View Services</a>
+<a class="btn secondary" href="#services">
+View Services
+</a>
 
 </div>
 
 </div>
+
 
 <div class="hero-photo">
 
-<img src="assets/kamran-profile-crop.jpg"
-alt="Kamran Tahir — AI Video Creator and Video Editor">
+<img
+src="assets/kamran-profile-crop.jpg"
+alt="Kamran Tahir — AI Video Creator and Video Editor"
+>
 
 </div>
 
 </section>
 
+
+<!-- SELECTED WORK -->
 
 <section class="section alt" id="work">
 
@@ -172,9 +629,13 @@ alt="Kamran Tahir — AI Video Creator and Video Editor">
 
 <div>
 
-<div class="label">SELECTED WORK</div>
+<div class="label">
+SELECTED WORK
+</div>
 
-<h2>Proof, not just promises.</h2>
+<h2>
+Proof, not just promises.
+</h2>
 
 </div>
 
@@ -185,20 +646,29 @@ A selection of AI-powered commercial, advertising and storytelling work created 
 </div>
 
 
+<!-- FEATURED YOUTUBE PROJECT -->
+
 <div class="featured">
 
 <div class="thumb">
 
-<img src="assets/vegas-429k.jpg"
-alt="The Great Las Vegas Heist">
+<img
+src="assets/vegas-429k.jpg"
+alt="The Great Las Vegas Heist"
+>
 
 </div>
 
+
 <div class="featured-body">
 
-<div class="label">FEATURED • AI DOCUMENTARY</div>
+<div class="label">
+FEATURED • AI DOCUMENTARY
+</div>
 
-<h3>The Great Las Vegas Heist</h3>
+<h3>
+The Great Las Vegas Heist
+</h3>
 
 <p>
 A long-form AI-assisted true-crime documentary built around cinematic AI visuals, storytelling, narration and professional editing.
@@ -207,18 +677,35 @@ A long-form AI-assisted true-crime documentary built around cinematic AI visuals
 <div class="stats">
 
 <div class="stat">
+
 <strong>429K+</strong>
-<span>VIEWS</span>
+
+<span>
+VIEWS
+</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>42.2K</strong>
-<span>WATCH HOURS</span>
+
+<span>
+WATCH HOURS
+</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>841+</strong>
-<span>SUBSCRIBERS</span>
+
+<span>
+SUBSCRIBERS
+</span>
+
 </div>
 
 </div>
@@ -231,26 +718,42 @@ A long-form AI-assisted true-crime documentary built around cinematic AI visuals
 <div style="height:24px"></div>
 
 
+<!-- PROJECT GRID -->
+
 <div class="grid">
 
+
+<!-- AI UGC -->
 
 <article class="card">
 
 <div class="media vertical">
 
-<video controls preload="metadata" poster="assets/ugc-ad.jpg">
+<video
+controls
+preload="metadata"
+poster="assets/ugc-ad.jpg"
+>
 
-<source src="assets/ugc-ad.mp4" type="video/mp4">
+<source
+src="assets/ugc-ad.mp4"
+type="video/mp4"
+>
 
 </video>
 
 </div>
 
+
 <div class="cardbody">
 
-<div class="label">AI UGC • ADVERTISING</div>
+<div class="label">
+AI UGC • ADVERTISING
+</div>
 
-<h3>AI UGC Product Ad</h3>
+<h3>
+AI UGC Product Ad
+</h3>
 
 <p>
 Short-form AI UGC advertising created for social-first product promotion, combining generated visuals, performance and professional editing.
@@ -258,9 +761,17 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 
 <div class="meta">
 
-<span class="pill">UGC Ads</span>
-<span class="pill">Short-form</span>
-<span class="pill">AI Video</span>
+<span class="pill">
+UGC Ads
+</span>
+
+<span class="pill">
+Short-form
+</span>
+
+<span class="pill">
+AI Video
+</span>
 
 </div>
 
@@ -269,23 +780,37 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 </article>
 
 
+<!-- AI COMMERCIAL -->
+
 <article class="card">
 
 <div class="media video-horizontal">
 
-<video controls preload="metadata" poster="assets/ai-commercial-ad.jpg">
+<video
+controls
+preload="metadata"
+poster="assets/ai-commercial-ad.jpg"
+>
 
-<source src="assets/ai-commercial-ad.mp4" type="video/mp4">
+<source
+src="assets/ai-commercial-ad.mp4"
+type="video/mp4"
+>
 
 </video>
 
 </div>
 
+
 <div class="cardbody">
 
-<div class="label">AI COMMERCIAL • PRODUCT AD</div>
+<div class="label">
+AI COMMERCIAL • PRODUCT AD
+</div>
 
-<h3>Cinematic AI Commercial</h3>
+<h3>
+Cinematic AI Commercial
+</h3>
 
 <p>
 A commercial-style AI production built around cinematic product and lifestyle visuals.
@@ -293,9 +818,17 @@ A commercial-style AI production built around cinematic product and lifestyle vi
 
 <div class="meta">
 
-<span class="pill">Product Ads</span>
-<span class="pill">Commercial</span>
-<span class="pill">AI Video</span>
+<span class="pill">
+Product Ads
+</span>
+
+<span class="pill">
+Commercial
+</span>
+
+<span class="pill">
+AI Video
+</span>
 
 </div>
 
@@ -304,25 +837,37 @@ A commercial-style AI production built around cinematic product and lifestyle vi
 </article>
 
 
-<!-- NEW MUSIC VIDEO AD -->
+<!-- MUSIC VIDEO -->
 
 <article class="card">
 
 <div class="media vertical">
 
-<video controls preload="metadata" poster="assets/music-video-ad.jpg">
+<video
+controls
+preload="metadata"
+poster="assets/music-video-ad.jpg"
+>
 
-<source src="assets/music-video-ad.mp4" type="video/mp4">
+<source
+src="assets/music-video-ad.mp4"
+type="video/mp4"
+>
 
 </video>
 
 </div>
 
+
 <div class="cardbody">
 
-<div class="label">AI MUSIC VIDEO • AD</div>
+<div class="label">
+AI MUSIC VIDEO • AD
+</div>
 
-<h3>AI Music Video Advertisement</h3>
+<h3>
+AI Music Video Advertisement
+</h3>
 
 <p>
 A cinematic AI-generated music video advertisement combining AI characters, lifestyle visuals, dynamic camera work and professional editing.
@@ -330,9 +875,17 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 
 <div class="meta">
 
-<span class="pill">AI Video</span>
-<span class="pill">Music Video</span>
-<span class="pill">Advertising</span>
+<span class="pill">
+AI Video
+</span>
+
+<span class="pill">
+Music Video
+</span>
+
+<span class="pill">
+Advertising
+</span>
 
 </div>
 
@@ -341,20 +894,29 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 </article>
 
 
+<!-- HEIST DOCUMENTARY -->
+
 <article class="card">
 
 <div class="media">
 
-<img src="assets/heist-114k.jpg"
-alt="The Engineer Who Legally Stole $800,000">
+<img
+src="assets/heist-114k.jpg"
+alt="The Engineer Who Legally Stole $800,000"
+>
 
 </div>
 
+
 <div class="cardbody">
 
-<div class="label">AI DOCUMENTARY</div>
+<div class="label">
+AI DOCUMENTARY
+</div>
 
-<h3>The Engineer Who Legally Stole $800,000</h3>
+<h3>
+The Engineer Who Legally Stole $800,000
+</h3>
 
 <p>
 Faceless AI documentary storytelling with cinematic scenes, narration and professional editing.
@@ -363,13 +925,24 @@ Faceless AI documentary storytelling with cinematic scenes, narration and profes
 <div class="stats">
 
 <div class="stat">
+
 <strong>114K+</strong>
-<span>VIEWS</span>
+
+<span>
+VIEWS
+</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>7.8K</strong>
-<span>WATCH HOURS</span>
+
+<span>
+WATCH HOURS
+</span>
+
 </div>
 
 </div>
@@ -379,20 +952,29 @@ Faceless AI documentary storytelling with cinematic scenes, narration and profes
 </article>
 
 
+<!-- CASINO DOCUMENTARY -->
+
 <article class="card">
 
 <div class="media">
 
-<img src="assets/casino-17k.jpg"
-alt="Casino documentary">
+<img
+src="assets/casino-17k.jpg"
+alt="Casino documentary"
+>
 
 </div>
 
+
 <div class="cardbody">
 
-<div class="label">AI DOCUMENTARY</div>
+<div class="label">
+AI DOCUMENTARY
+</div>
 
-<h3>Casino Story Documentary</h3>
+<h3>
+Casino Story Documentary
+</h3>
 
 <p>
 A long-form AI-generated documentary focused on mystery, investigation and cinematic storytelling.
@@ -401,13 +983,24 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 <div class="stats">
 
 <div class="stat">
+
 <strong>17K+</strong>
-<span>VIEWS</span>
+
+<span>
+VIEWS
+</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>3.8K</strong>
-<span>WATCH HOURS</span>
+
+<span>
+WATCH HOURS
+</span>
+
 </div>
 
 </div>
@@ -424,6 +1017,8 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 </section>
 
 
+<!-- SERVICES -->
+
 <section class="section" id="services">
 
 <div class="container">
@@ -432,9 +1027,13 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 
 <div>
 
-<div class="label">WHAT I CREATE</div>
+<div class="label">
+WHAT I CREATE
+</div>
 
-<h2>AI video built for modern content.</h2>
+<h2>
+AI video built for modern content.
+</h2>
 
 </div>
 
@@ -443,9 +1042,12 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 
 <div class="servicegrid">
 
+
 <div class="service">
 
-<strong>AI UGC & Ads</strong>
+<strong>
+AI UGC & Ads
+</strong>
 
 <p>
 Scroll-stopping social ads, UGC-style content and product promotions.
@@ -456,7 +1058,9 @@ Scroll-stopping social ads, UGC-style content and product promotions.
 
 <div class="service">
 
-<strong>Product Commercials</strong>
+<strong>
+Product Commercials
+</strong>
 
 <p>
 Cinematic AI commercials and product-focused visual campaigns.
@@ -467,7 +1071,9 @@ Cinematic AI commercials and product-focused visual campaigns.
 
 <div class="service">
 
-<strong>YouTube Content</strong>
+<strong>
+YouTube Content
+</strong>
 
 <p>
 Long-form documentaries, storytelling and faceless channel production.
@@ -478,7 +1084,9 @@ Long-form documentaries, storytelling and faceless channel production.
 
 <div class="service">
 
-<strong>Short-Form Video</strong>
+<strong>
+Short-Form Video
+</strong>
 
 <p>
 Reels, Shorts and creative AI stories designed for social platforms.
@@ -486,12 +1094,15 @@ Reels, Shorts and creative AI stories designed for social platforms.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- CREATIVE RANGE -->
 
 <section class="section alt">
 
@@ -501,9 +1112,13 @@ Reels, Shorts and creative AI stories designed for social platforms.
 
 <div>
 
-<div class="label">CREATIVE RANGE</div>
+<div class="label">
+CREATIVE RANGE
+</div>
 
-<h2>Short-form AI storytelling.</h2>
+<h2>
+Short-form AI storytelling.
+</h2>
 
 </div>
 
@@ -516,23 +1131,36 @@ A horror short demonstrating another visual style and narrative approach.
 
 <div class="grid">
 
+
 <article class="card">
 
 <div class="media vertical">
 
-<video controls preload="metadata" poster="assets/ai-horror-short.jpg">
+<video
+controls
+preload="metadata"
+poster="assets/ai-horror-short.jpg"
+>
 
-<source src="assets/ai-horror-short.mp4" type="video/mp4">
+<source
+src="assets/ai-horror-short.mp4"
+type="video/mp4"
+>
 
 </video>
 
 </div>
 
+
 <div class="cardbody">
 
-<div class="label">AI SHORT FILM</div>
+<div class="label">
+AI SHORT FILM
+</div>
 
-<h3>AI Horror Story</h3>
+<h3>
+AI Horror Story
+</h3>
 
 <p>
 An AI-generated horror short combining atmospheric visuals, character scenes and cinematic editing.
@@ -540,15 +1168,24 @@ An AI-generated horror short combining atmospheric visuals, character scenes and
 
 <div class="meta">
 
-<span class="pill">Storytelling</span>
-<span class="pill">AI Generation</span>
-<span class="pill">Editing</span>
+<span class="pill">
+Storytelling
+</span>
+
+<span class="pill">
+AI Generation
+</span>
+
+<span class="pill">
+Editing
+</span>
 
 </div>
 
 </div>
 
 </article>
+
 
 </div>
 
@@ -557,23 +1194,32 @@ An AI-generated horror short combining atmospheric visuals, character scenes and
 </section>
 
 
+<!-- ABOUT -->
+
 <section class="section" id="about">
 
 <div class="container about">
 
+
 <div class="about-photo">
 
-<img src="assets/kamran-profile.png"
-alt="Kamran Tahir">
+<img
+src="assets/kamran-profile.png"
+alt="Kamran Tahir"
+>
 
 </div>
 
 
 <div>
 
-<div class="label">ABOUT</div>
+<div class="label">
+ABOUT
+</div>
 
-<h2>Creative production, powered by AI.</h2>
+<h2>
+Creative production, powered by AI.
+</h2>
 
 <p>
 I'm Kamran Tahir, an AI Video Creator and Video Editor focused on turning concepts into polished, engaging videos.
@@ -589,10 +1235,13 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 
 </div>
 
+
 </div>
 
 </section>
 
+
+<!-- WORKFLOW -->
 
 <section class="section alt">
 
@@ -602,9 +1251,13 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 
 <div>
 
-<div class="label">WORKFLOW</div>
+<div class="label">
+WORKFLOW
+</div>
 
-<h2>From idea to finished video.</h2>
+<h2>
+From idea to finished video.
+</h2>
 
 </div>
 
@@ -613,30 +1266,71 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 
 <div class="workflow">
 
-<div class="step">
-<b>01</b>
-<span>Concept</span>
-</div>
 
 <div class="step">
-<b>02</b>
-<span>AI Generation</span>
+
+<b>
+01
+</b>
+
+<span>
+Concept
+</span>
+
 </div>
 
-<div class="step">
-<b>03</b>
-<span>Voice & Story</span>
-</div>
 
 <div class="step">
-<b>04</b>
-<span>Editing</span>
+
+<b>
+02
+</b>
+
+<span>
+AI Generation
+</span>
+
 </div>
 
+
 <div class="step">
-<b>05</b>
-<span>Final Delivery</span>
+
+<b>
+03
+</b>
+
+<span>
+Voice & Story
+</span>
+
 </div>
+
+
+<div class="step">
+
+<b>
+04
+</b>
+
+<span>
+Editing
+</span>
+
+</div>
+
+
+<div class="step">
+
+<b>
+05
+</b>
+
+<span>
+Final Delivery
+</span>
+
+</div>
+
 
 </div>
 
@@ -647,17 +1341,24 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 </main>
 
 
+<!-- FOOTER -->
+
 <div class="container">
 
 <footer class="footer">
 
-<span>© 2026 Kamran Tahir</span>
+<span>
+© 2026 Kamran Tahir
+</span>
 
-<span>AI Video Creator • Video Editor</span>
+<span>
+AI Video Creator • Video Editor
+</span>
 
 </footer>
 
 </div>
+
 
 </body>
 </html>
