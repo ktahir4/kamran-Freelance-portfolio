@@ -49,8 +49,6 @@ a{
   color:inherit
 }
 
-/* NAV */
-
 .nav{
   height:76px;
   display:flex;
@@ -169,7 +167,7 @@ a{
   text-transform:uppercase
 }
 
-/* GRID / CARDS */
+/* GRID */
 
 .grid{
   display:grid;
@@ -185,7 +183,7 @@ a{
   box-shadow:0 8px 35px rgba(17,24,39,.045)
 }
 
-/* LOCAL VIDEO PROJECTS */
+/* LOCAL VIDEO MEDIA */
 
 .media{
   position:relative;
@@ -221,6 +219,24 @@ a{
   max-height:650px;
   background:#0b0b0e
 }
+
+/* YOUTUBE THUMBNAILS */
+
+.media.youtube-thumb{
+  aspect-ratio:16/9;
+  background:#111;
+  overflow:hidden
+}
+
+.media.youtube-thumb img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center
+}
+
+/* CARD BODY */
 
 .cardbody{
   padding:22px
@@ -265,9 +281,7 @@ a{
   color:var(--accent2)
 }
 
-/* FEATURED YOUTUBE PROJECT
-   ONLY THIS YOUTUBE THUMBNAIL PRESENTATION IS CHANGED
-*/
+/* FEATURED YOUTUBE PROJECT */
 
 .featured{
   display:grid;
@@ -277,21 +291,23 @@ a{
   border:1px solid var(--border);
   border-radius:20px;
   overflow:hidden;
-  box-shadow:var(--shadow)
+  box-shadow:var(--shadow);
+  align-items:stretch
 }
 
 .featured .thumb{
   background:#111;
-  aspect-ratio:16/9;
-  overflow:hidden
+  overflow:hidden;
+  min-height:100%;
+  align-self:stretch
 }
 
 .featured .thumb img{
   width:100%;
   height:100%;
+  display:block;
   object-fit:cover;
-  object-position:center;
-  display:block
+  object-position:center
 }
 
 .featured-body{
@@ -465,6 +481,17 @@ a{
     padding:26px
   }
 
+  .featured .thumb{
+    aspect-ratio:16/9;
+    min-height:0
+  }
+
+  .featured .thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover
+  }
+
   .navlinks{
     gap:18px
   }
@@ -542,7 +569,6 @@ a{
     margin-top:8px
   }
 }
-
 </style>
 </head>
 
@@ -734,9 +760,11 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 </p>
 
 <div class="meta">
+
 <span class="pill">UGC Ads</span>
 <span class="pill">Short-form</span>
 <span class="pill">AI Video</span>
+
 </div>
 
 </div>
@@ -781,9 +809,11 @@ A commercial-style AI production built around cinematic product and lifestyle vi
 </p>
 
 <div class="meta">
+
 <span class="pill">Product Ads</span>
 <span class="pill">Commercial</span>
 <span class="pill">AI Video</span>
+
 </div>
 
 </div>
@@ -828,9 +858,11 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 </p>
 
 <div class="meta">
+
 <span class="pill">AI Video</span>
 <span class="pill">Music Video</span>
 <span class="pill">Advertising</span>
+
 </div>
 
 </div>
@@ -842,7 +874,7 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 
 <article class="card">
 
-<div class="media">
+<div class="media youtube-thumb">
 
 <img
 src="assets/heist-114k.jpg"
@@ -905,7 +937,7 @@ Watch Project →
 
 <article class="card">
 
-<div class="media">
+<div class="media youtube-thumb">
 
 <img
 src="assets/casino-17k.jpg"
@@ -933,18 +965,24 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 <div class="stats">
 
 <div class="stat">
+
 <strong>17K+</strong>
 <span>VIEWS</span>
+
 </div>
 
 <div class="stat">
+
 <strong>3.8K</strong>
 <span>WATCH HOURS</span>
+
 </div>
 
 <div class="stat">
+
 <strong>140+</strong>
 <span>SUBSCRIBERS</span>
+
 </div>
 
 </div>
@@ -1001,9 +1039,11 @@ A short AI-generated horror story combining atmospheric visuals, character scene
 </p>
 
 <div class="meta">
+
 <span class="pill">Storytelling</span>
 <span class="pill">AI Generation</span>
 <span class="pill">Editing</span>
+
 </div>
 
 </div>
@@ -1206,6 +1246,7 @@ A streamlined AI production workflow focused on quality, consistency and profess
 
 </section>
 
+
 </main>
 
 
@@ -1224,6 +1265,7 @@ AI Video Creator • Video Editor
 </footer>
 
 </div>
+
 
 </body>
 </html>
