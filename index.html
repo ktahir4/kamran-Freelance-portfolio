@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <meta name="description" content="Kamran Tahir — AI Video Creator and Video Editor specializing in AI UGC ads, cinematic product videos, documentaries and short-form storytelling.">
+
 <title>Kamran Tahir — AI Video Creator & Video Editor</title>
 
 <style>
@@ -43,8 +45,6 @@ text-decoration:none;
 color:inherit
 }
 
-/* NAVIGATION */
-
 .nav{
 height:76px;
 display:flex;
@@ -79,8 +79,6 @@ border-radius:9px;
 font-size:14px;
 font-weight:750
 }
-
-/* HERO */
 
 .hero{
 padding:82px 0 92px;
@@ -160,8 +158,6 @@ object-fit:cover;
 object-position:center top
 }
 
-/* SECTIONS */
-
 .section{
 padding:78px 0
 }
@@ -197,8 +193,6 @@ color:var(--accent);
 letter-spacing:.13em;
 text-transform:uppercase
 }
-
-/* PROJECT GRID */
 
 .grid{
 display:grid;
@@ -279,8 +273,19 @@ padding:7px 10px;
 border-radius:999px
 }
 
-/* FEATURED PROJECT */
+.link{
+display:inline-block;
+font-weight:800;
+color:var(--accent);
+font-size:14px;
+margin-top:4px
+}
 
+.link:hover{
+color:var(--accent2)
+}
+
+/* FEATURED YOUTUBE PROJECT */
 .featured{
 display:grid;
 grid-template-columns:1.15fr .85fr;
@@ -294,16 +299,15 @@ box-shadow:var(--shadow)
 
 .featured .thumb{
 background:#111;
+align-self:start;
 aspect-ratio:16/9;
-overflow:hidden;
-align-self:start
+overflow:hidden
 }
 
 .featured .thumb img{
 width:100%;
 height:100%;
-object-fit:cover;
-object-position:center;
+object-fit:contain;
 display:block
 }
 
@@ -326,13 +330,11 @@ color:var(--muted);
 font-size:16px
 }
 
-/* STATS */
-
 .stats{
 display:flex;
 gap:10px;
 flex-wrap:wrap;
-margin:20px 0
+margin:20px 0 24px
 }
 
 .stat{
@@ -353,8 +355,6 @@ font-size:11px;
 color:var(--muted);
 font-weight:700
 }
-
-/* SERVICES */
 
 .servicegrid{
 display:grid;
@@ -379,8 +379,6 @@ margin:0;
 color:var(--muted);
 font-size:14px
 }
-
-/* ABOUT */
 
 .about{
 display:grid;
@@ -413,8 +411,6 @@ color:var(--muted);
 font-size:17px
 }
 
-/* WORKFLOW */
-
 .workflow{
 display:grid;
 grid-template-columns:repeat(5,1fr);
@@ -440,7 +436,51 @@ margin-bottom:8px
 font-weight:800
 }
 
-/* FOOTER */
+.contact{
+background:var(--dark);
+color:#fff;
+border-radius:22px;
+padding:52px
+}
+
+.contact h2{
+font-size:46px;
+letter-spacing:-.05em;
+line-height:1;
+margin:7px 0 15px
+}
+
+.contact p{
+color:#c5c9d2;
+max-width:620px
+}
+
+.contact-actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:24px
+}
+
+.contact .btn.primary{
+background:#fff;
+color:var(--dark)
+}
+
+.contact .btn.secondary{
+border-color:#3a4050;
+background:transparent;
+color:#fff
+}
+
+.contact-details{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+margin-top:23px;
+color:#d7dbe4;
+font-size:14px
+}
 
 .footer{
 padding:34px 0;
@@ -450,8 +490,6 @@ display:flex;
 justify-content:space-between;
 gap:20px
 }
-
-/* TABLET */
 
 @media(max-width:900px){
 
@@ -483,8 +521,6 @@ display:none
 }
 
 }
-
-/* MOBILE */
 
 @media(max-width:620px){
 
@@ -531,6 +567,14 @@ width:100%;
 max-width:330px
 }
 
+.contact{
+padding:32px 24px
+}
+
+.contact h2{
+font-size:38px
+}
+
 .footer{
 display:block
 }
@@ -555,15 +599,14 @@ KAMRAN TAHIR
 </a>
 
 <div class="navlinks">
-
 <a href="#work">Work</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
-
+<a href="#contact">Contact</a>
 </div>
 
-<a class="navcta" href="#work">
-View Work
+<a class="navcta" href="#contact">
+Hire Me
 </a>
 
 </nav>
@@ -572,6 +615,7 @@ View Work
 
 
 <main id="top">
+
 
 <!-- HERO -->
 
@@ -584,8 +628,7 @@ AI VIDEO CREATOR • VIDEO EDITOR
 </div>
 
 <h1>
-I turn ideas into
-<span>high-impact video.</span>
+I turn ideas into <span>high-impact video.</span>
 </h1>
 
 <p>
@@ -598,8 +641,8 @@ AI-powered UGC ads, product commercials, cinematic documentaries and short-form 
 View My Work ↓
 </a>
 
-<a class="btn secondary" href="#services">
-View Services
+<a class="btn secondary" href="#contact">
+Let's Work Together
 </a>
 
 </div>
@@ -619,7 +662,8 @@ alt="Kamran Tahir — AI Video Creator and Video Editor"
 </section>
 
 
-<!-- SELECTED WORK -->
+
+<!-- WORK -->
 
 <section class="section alt" id="work">
 
@@ -630,7 +674,7 @@ alt="Kamran Tahir — AI Video Creator and Video Editor"
 <div>
 
 <div class="label">
-SELECTED WORK
+Selected work
 </div>
 
 <h2>
@@ -654,7 +698,7 @@ A selection of AI-powered commercial, advertising and storytelling work created 
 
 <img
 src="assets/vegas-429k.jpg"
-alt="The Great Las Vegas Heist"
+alt="The Great Las Vegas Heist thumbnail"
 >
 
 </div>
@@ -663,7 +707,7 @@ alt="The Great Las Vegas Heist"
 <div class="featured-body">
 
 <div class="label">
-FEATURED • AI DOCUMENTARY
+Featured • AI Documentary
 </div>
 
 <h3>
@@ -671,44 +715,39 @@ The Great Las Vegas Heist
 </h3>
 
 <p>
-A long-form AI-assisted true-crime documentary built around cinematic AI visuals, storytelling, narration and professional editing.
+A long-form AI-assisted true-crime documentary about the $3.1 million Las Vegas armored-car heist. Built around cinematic AI visuals, storytelling, narration and professional editing.
 </p>
+
 
 <div class="stats">
 
 <div class="stat">
-
 <strong>429K+</strong>
-
-<span>
-VIEWS
-</span>
-
+<span>VIEWS</span>
 </div>
 
-
 <div class="stat">
-
 <strong>42.2K</strong>
-
-<span>
-WATCH HOURS
-</span>
-
+<span>WATCH HOURS</span>
 </div>
-
 
 <div class="stat">
-
 <strong>841+</strong>
-
-<span>
-SUBSCRIBERS
-</span>
-
+<span>SUBSCRIBERS</span>
 </div>
 
 </div>
+
+
+<a
+class="link"
+href="https://youtu.be/1S5rsPil3fs"
+target="_blank"
+rel="noopener noreferrer"
+>
+Watch Project →
+</a>
+
 
 </div>
 
@@ -718,12 +757,10 @@ SUBSCRIBERS
 <div style="height:24px"></div>
 
 
-<!-- PROJECT GRID -->
-
 <div class="grid">
 
 
-<!-- AI UGC -->
+<!-- UGC -->
 
 <article class="card">
 
@@ -761,17 +798,9 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 
 <div class="meta">
 
-<span class="pill">
-UGC Ads
-</span>
-
-<span class="pill">
-Short-form
-</span>
-
-<span class="pill">
-AI Video
-</span>
+<span class="pill">UGC Ads</span>
+<span class="pill">Short-form</span>
+<span class="pill">AI Video</span>
 
 </div>
 
@@ -780,7 +809,8 @@ AI Video
 </article>
 
 
-<!-- AI COMMERCIAL -->
+
+<!-- COMMERCIAL -->
 
 <article class="card">
 
@@ -813,28 +843,21 @@ Cinematic AI Commercial
 </h3>
 
 <p>
-A commercial-style AI production built around cinematic product and lifestyle visuals.
+A 68-second commercial-style AI production built around cinematic product and lifestyle visuals.
 </p>
 
 <div class="meta">
 
-<span class="pill">
-Product Ads
-</span>
-
-<span class="pill">
-Commercial
-</span>
-
-<span class="pill">
-AI Video
-</span>
+<span class="pill">Product Ads</span>
+<span class="pill">Commercial</span>
+<span class="pill">AI Video</span>
 
 </div>
 
 </div>
 
 </article>
+
 
 
 <!-- MUSIC VIDEO -->
@@ -875,17 +898,9 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 
 <div class="meta">
 
-<span class="pill">
-AI Video
-</span>
-
-<span class="pill">
-Music Video
-</span>
-
-<span class="pill">
-Advertising
-</span>
+<span class="pill">AI Video</span>
+<span class="pill">Music Video</span>
+<span class="pill">Advertising</span>
 
 </div>
 
@@ -894,7 +909,8 @@ Advertising
 </article>
 
 
-<!-- HEIST DOCUMENTARY -->
+
+<!-- ENGINEER YOUTUBE PROJECT -->
 
 <article class="card">
 
@@ -919,40 +935,46 @@ The Engineer Who Legally Stole $800,000
 </h3>
 
 <p>
-Faceless AI documentary storytelling with cinematic scenes, narration and professional editing.
+Faceless humanoid AI documentary storytelling with cinematic scenes, narration and professional editing.
 </p>
+
 
 <div class="stats">
 
 <div class="stat">
-
 <strong>114K+</strong>
-
-<span>
-VIEWS
-</span>
-
+<span>VIEWS</span>
 </div>
-
 
 <div class="stat">
-
 <strong>7.8K</strong>
+<span>WATCH HOURS</span>
+</div>
 
-<span>
-WATCH HOURS
-</span>
-
+<div class="stat">
+<strong>200+</strong>
+<span>SUBSCRIBERS</span>
 </div>
 
 </div>
+
+
+<a
+class="link"
+href="https://youtu.be/cFmQ9YCNBuY"
+target="_blank"
+rel="noopener noreferrer"
+>
+Watch Project →
+</a>
 
 </div>
 
 </article>
 
 
-<!-- CASINO DOCUMENTARY -->
+
+<!-- CASINO YOUTUBE PROJECT -->
 
 <article class="card">
 
@@ -960,7 +982,7 @@ WATCH HOURS
 
 <img
 src="assets/casino-17k.jpg"
-alt="Casino documentary"
+alt="Hidden slot machine trick documentary"
 >
 
 </div>
@@ -969,41 +991,52 @@ alt="Casino documentary"
 <div class="cardbody">
 
 <div class="label">
-AI DOCUMENTARY
+AI DOCUMENTARY • CASINO STORY
 </div>
 
 <h3>
-Casino Story Documentary
+How a Player Used a Hidden Slot Machine Trick and Won Millions
 </h3>
 
 <p>
-A long-form AI-generated documentary focused on mystery, investigation and cinematic storytelling.
+A 29-minute AI-generated documentary focused on mystery, investigation and cinematic storytelling.
 </p>
+
 
 <div class="stats">
 
 <div class="stat">
 
 <strong>17K+</strong>
-
-<span>
-VIEWS
-</span>
+<span>VIEWS</span>
 
 </div>
-
 
 <div class="stat">
 
 <strong>3.8K</strong>
+<span>WATCH HOURS</span>
 
-<span>
-WATCH HOURS
-</span>
+</div>
+
+<div class="stat">
+
+<strong>140+</strong>
+<span>SUBSCRIBERS</span>
 
 </div>
 
 </div>
+
+
+<a
+class="link"
+href="https://youtu.be/zkVD7xqulzM"
+target="_blank"
+rel="noopener noreferrer"
+>
+Watch Project →
+</a>
 
 </div>
 
@@ -1017,6 +1050,7 @@ WATCH HOURS
 </section>
 
 
+
 <!-- SERVICES -->
 
 <section class="section" id="services">
@@ -1028,11 +1062,11 @@ WATCH HOURS
 <div>
 
 <div class="label">
-WHAT I CREATE
+What I create
 </div>
 
 <h2>
-AI video built for modern content.
+AI video built for real clients.
 </h2>
 
 </div>
@@ -1041,7 +1075,6 @@ AI video built for modern content.
 
 
 <div class="servicegrid">
-
 
 <div class="service">
 
@@ -1094,12 +1127,12 @@ Reels, Shorts and creative AI stories designed for social platforms.
 
 </div>
 
-
 </div>
 
 </div>
 
 </section>
+
 
 
 <!-- CREATIVE RANGE -->
@@ -1113,7 +1146,7 @@ Reels, Shorts and creative AI stories designed for social platforms.
 <div>
 
 <div class="label">
-CREATIVE RANGE
+Creative range
 </div>
 
 <h2>
@@ -1123,14 +1156,13 @@ Short-form AI storytelling.
 </div>
 
 <p>
-A horror short demonstrating another visual style and narrative approach.
+A horror short demonstrating a different visual style and narrative approach.
 </p>
 
 </div>
 
 
 <div class="grid">
-
 
 <article class="card">
 
@@ -1163,22 +1195,14 @@ AI Horror Story
 </h3>
 
 <p>
-An AI-generated horror short combining atmospheric visuals, character scenes and cinematic editing.
+A ~56-second AI-generated horror story combining atmospheric visuals, character scenes and cinematic editing.
 </p>
 
 <div class="meta">
 
-<span class="pill">
-Storytelling
-</span>
-
-<span class="pill">
-AI Generation
-</span>
-
-<span class="pill">
-Editing
-</span>
+<span class="pill">Storytelling</span>
+<span class="pill">AI Generation</span>
+<span class="pill">Editing</span>
 
 </div>
 
@@ -1186,12 +1210,12 @@ Editing
 
 </article>
 
-
 </div>
 
 </div>
 
 </section>
+
 
 
 <!-- ABOUT -->
@@ -1200,12 +1224,11 @@ Editing
 
 <div class="container about">
 
-
 <div class="about-photo">
 
 <img
 src="assets/kamran-profile.png"
-alt="Kamran Tahir"
+alt="Kamran Tahir professional portrait"
 >
 
 </div>
@@ -1214,7 +1237,7 @@ alt="Kamran Tahir"
 <div>
 
 <div class="label">
-ABOUT
+About
 </div>
 
 <h2>
@@ -1222,11 +1245,7 @@ Creative production, powered by AI.
 </h2>
 
 <p>
-I'm Kamran Tahir, an AI Video Creator and Video Editor focused on turning concepts into polished, engaging videos.
-</p>
-
-<p>
-My work spans AI UGC advertising, product commercials, cinematic documentaries, YouTube storytelling and short-form content.
+I'm Kamran Tahir, an AI Video Creator and Video Editor focused on turning concepts into polished, engaging videos. My work spans AI UGC advertising, product commercials, cinematic documentaries, YouTube storytelling and short-form content.
 </p>
 
 <p>
@@ -1235,10 +1254,10 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 
 </div>
 
-
 </div>
 
 </section>
+
 
 
 <!-- WORKFLOW -->
@@ -1252,7 +1271,7 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 <div>
 
 <div class="label">
-WORKFLOW
+Workflow
 </div>
 
 <h2>
@@ -1266,71 +1285,30 @@ From idea to finished video.
 
 <div class="workflow">
 
-
 <div class="step">
-
-<b>
-01
-</b>
-
-<span>
-Concept
-</span>
-
+<b>01</b>
+<span>Concept</span>
 </div>
 
-
 <div class="step">
-
-<b>
-02
-</b>
-
-<span>
-AI Generation
-</span>
-
+<b>02</b>
+<span>AI Generation</span>
 </div>
 
-
 <div class="step">
-
-<b>
-03
-</b>
-
-<span>
-Voice & Story
-</span>
-
+<b>03</b>
+<span>Voice & Story</span>
 </div>
 
-
 <div class="step">
-
-<b>
-04
-</b>
-
-<span>
-Editing
-</span>
-
+<b>04</b>
+<span>Editing</span>
 </div>
 
-
 <div class="step">
-
-<b>
-05
-</b>
-
-<span>
-Final Delivery
-</span>
-
+<b>05</b>
+<span>Final Delivery</span>
 </div>
-
 
 </div>
 
@@ -1338,10 +1316,71 @@ Final Delivery
 
 </section>
 
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<div class="label">
+Let's work together
+</div>
+
+<h2>
+Have an idea? Let's turn it into video.
+</h2>
+
+<p>
+Looking for AI UGC ads, product commercials, YouTube documentaries or creative short-form content? Get in touch and tell me what you need.
+</p>
+
+
+<div class="contact-actions">
+
+<a
+class="btn primary"
+href="https://wa.me/923340811117"
+target="_blank"
+rel="noopener noreferrer"
+>
+WhatsApp Me
+</a>
+
+<a
+class="btn secondary"
+href="mailto:Kamran.tahir11@gmail.com"
+>
+Email Me
+</a>
+
+</div>
+
+
+<div class="contact-details">
+
+<span>
+WhatsApp: +92 334 0811117
+</span>
+
+<span>
+Email: Kamran.tahir11@gmail.com
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
 </main>
 
-
-<!-- FOOTER -->
 
 <div class="container">
 
