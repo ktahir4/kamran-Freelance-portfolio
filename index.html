@@ -4,585 +4,526 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<meta name="description" content="Kamran Tahir — AI Video Creator and Video Editor specializing in AI UGC ads, cinematic product videos, documentaries and short-form storytelling.">
+<meta name="description" content="Kamran Tahir — AI Video Creator and Video Editor specializing in AI UGC ads, cinematic commercials, documentaries and short-form video.">
 
 <title>Kamran Tahir — AI Video Creator & Video Editor</title>
 
 <style>
 :root{
---bg:#fff;
---surface:#f8f8fb;
---surface2:#f3f1ff;
---text:#111827;
---muted:#667085;
---border:#e7e7ee;
---accent:#6d4aff;
---accent2:#7c3aed;
---dark:#111827;
---shadow:0 18px 55px rgba(17,24,39,.08)
+  --bg:#fff;
+  --surface:#f8f8fb;
+  --surface2:#f3f1ff;
+  --text:#111827;
+  --muted:#667085;
+  --border:#e7e7ee;
+  --accent:#6d4aff;
+  --accent2:#7c3aed;
+  --dark:#111827;
+  --shadow:0 18px 55px rgba(17,24,39,.08)
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth
+}
 
 body{
-margin:0;
-background:var(--bg);
-color:var(--text);
-font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-line-height:1.5
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.5
 }
 
 .container{
-max-width:1160px;
-margin:auto;
-padding:0 24px
+  max-width:1160px;
+  margin:auto;
+  padding:0 24px
 }
 
 a{
-text-decoration:none;
-color:inherit
+  text-decoration:none;
+  color:inherit
 }
 
 .nav{
-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-border-bottom:1px solid var(--border)
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--border)
 }
 
 .brand{
-font-weight:850;
-letter-spacing:-.04em;
-font-size:20px
+  font-weight:850;
+  letter-spacing:-.04em;
+  font-size:20px
 }
 
 .navlinks{
-display:flex;
-gap:26px;
-color:#596273;
-font-size:14px;
-font-weight:650
+  display:flex;
+  gap:28px;
+  color:#596273;
+  font-size:14px;
+  font-weight:650
 }
 
 .navlinks a:hover{
-color:var(--text)
-}
-
-.navcta{
-background:var(--dark);
-color:#fff;
-padding:11px 17px;
-border-radius:9px;
-font-size:14px;
-font-weight:750
+  color:var(--text)
 }
 
 .hero{
-padding:82px 0 92px;
-display:grid;
-grid-template-columns:1.25fr .75fr;
-gap:70px;
-align-items:center
+  padding:82px 0 92px;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:70px;
+  align-items:center
 }
 
 .eyebrow{
-font-size:13px;
-font-weight:800;
-letter-spacing:.14em;
-color:var(--accent);
-text-transform:uppercase
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.14em;
+  color:var(--accent);
+  text-transform:uppercase
 }
 
 .hero h1{
-font-size:clamp(46px,6.2vw,76px);
-line-height:.98;
-letter-spacing:-.065em;
-margin:17px 0 22px
+  font-size:clamp(46px,6.2vw,76px);
+  line-height:.98;
+  letter-spacing:-.065em;
+  margin:17px 0 22px
 }
 
 .hero h1 span{
-color:var(--accent)
+  color:var(--accent)
 }
 
 .hero p{
-font-size:19px;
-color:var(--muted);
-max-width:690px;
-margin:0 0 28px
-}
-
-.buttons{
-display:flex;
-gap:12px;
-flex-wrap:wrap
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:13px 19px;
-border-radius:9px;
-font-weight:800;
-font-size:14px
-}
-
-.btn.primary{
-background:var(--dark);
-color:#fff
-}
-
-.btn.secondary{
-border:1px solid var(--border);
-background:#fff
+  font-size:19px;
+  color:var(--muted);
+  max-width:690px;
+  margin:0
 }
 
 .hero-photo{
-justify-self:end;
-width:min(370px,100%);
-border-radius:24px;
-overflow:hidden;
-border:1px solid var(--border);
-box-shadow:var(--shadow);
-background:#f1f1f4
+  justify-self:end;
+  width:min(370px,100%);
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  background:#f1f1f4
 }
 
 .hero-photo img{
-width:100%;
-display:block;
-aspect-ratio:4/5;
-object-fit:cover;
-object-position:center top
+  width:100%;
+  display:block;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center top
 }
 
 .section{
-padding:78px 0
+  padding:78px 0
 }
 
 .section.alt{
-background:var(--surface)
+  background:var(--surface)
 }
 
 .section-head{
-display:flex;
-justify-content:space-between;
-align-items:end;
-gap:30px;
-margin-bottom:30px
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:30px
 }
 
 .section-head h2{
-font-size:38px;
-letter-spacing:-.045em;
-margin:7px 0 0
+  font-size:38px;
+  letter-spacing:-.045em;
+  margin:7px 0 0
 }
 
 .section-head p{
-color:var(--muted);
-max-width:600px;
-margin:0
+  color:var(--muted);
+  max-width:600px;
+  margin:0
 }
 
 .label{
-font-size:12px;
-font-weight:850;
-color:var(--accent);
-letter-spacing:.13em;
-text-transform:uppercase
+  font-size:12px;
+  font-weight:850;
+  color:var(--accent);
+  letter-spacing:.13em;
+  text-transform:uppercase
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:24px
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px
 }
 
 .card{
-background:#fff;
-border:1px solid var(--border);
-border-radius:17px;
-overflow:hidden;
-box-shadow:0 8px 35px rgba(17,24,39,.045)
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:17px;
+  overflow:hidden;
+  box-shadow:0 8px 35px rgba(17,24,39,.045)
 }
 
 .media{
-position:relative;
-background:#111;
-overflow:hidden
+  position:relative;
+  background:#111;
+  overflow:hidden
 }
 
 .media img{
-width:100%;
-display:block;
-aspect-ratio:16/9;
-object-fit:cover
+  width:100%;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover
 }
 
 .media.vertical{
-max-width:440px;
-margin:auto
+  max-width:440px;
+  margin:auto
 }
 
-.media.vertical img{
-aspect-ratio:9/16
-}
-
-.media video{
-width:100%;
-display:block;
-max-height:650px;
-background:#0b0b0e
+.media.vertical video{
+  aspect-ratio:9/16;
+  object-fit:cover
 }
 
 .media.video-horizontal video{
-aspect-ratio:16/9;
-object-fit:cover
+  aspect-ratio:16/9;
+  object-fit:cover
+}
+
+.media video{
+  width:100%;
+  display:block;
+  max-height:650px;
+  background:#0b0b0e
 }
 
 .cardbody{
-padding:22px
+  padding:22px
 }
 
 .cardbody h3{
-font-size:24px;
-letter-spacing:-.03em;
-margin:6px 0 8px
+  font-size:24px;
+  letter-spacing:-.03em;
+  margin:6px 0 8px
 }
 
 .cardbody p{
-color:var(--muted);
-margin:0 0 15px
+  color:var(--muted);
+  margin:0 0 15px
 }
 
 .meta{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin:14px 0
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:14px 0
 }
 
 .pill{
-font-size:12px;
-font-weight:750;
-background:var(--surface2);
-color:#5b43c7;
-padding:7px 10px;
-border-radius:999px
+  font-size:12px;
+  font-weight:750;
+  background:var(--surface2);
+  color:#5b43c7;
+  padding:7px 10px;
+  border-radius:999px
 }
 
 .link{
-display:inline-block;
-font-weight:800;
-color:var(--accent);
-font-size:14px;
-margin-top:4px
+  display:inline-block;
+  font-weight:800;
+  color:var(--accent);
+  font-size:14px;
+  margin-top:4px
 }
 
 .link:hover{
-color:var(--accent2)
+  color:var(--accent2)
 }
 
 /* FEATURED YOUTUBE PROJECT */
+
 .featured{
-display:grid;
-grid-template-columns:1.15fr .85fr;
-gap:26px;
-background:#fff;
-border:1px solid var(--border);
-border-radius:20px;
-overflow:hidden;
-box-shadow:var(--shadow)
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow)
 }
 
 .featured .thumb{
-background:#111;
-align-self:start;
-aspect-ratio:16/9;
-overflow:hidden
+  background:#111;
+  align-self:stretch;
+  min-height:100%;
+  overflow:hidden
 }
 
 .featured .thumb img{
-width:100%;
-height:100%;
-object-fit:contain;
-display:block
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block
 }
 
 .featured-body{
-padding:34px;
-display:flex;
-flex-direction:column;
-justify-content:center
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center
 }
 
 .featured-body h3{
-font-size:34px;
-line-height:1.08;
-letter-spacing:-.045em;
-margin:8px 0 14px
+  font-size:34px;
+  line-height:1.08;
+  letter-spacing:-.045em;
+  margin:8px 0 14px
 }
 
 .featured-body p{
-color:var(--muted);
-font-size:16px
+  color:var(--muted);
+  font-size:16px
 }
 
 .stats{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin:20px 0 24px
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0 24px
 }
 
 .stat{
-background:var(--surface);
-border:1px solid var(--border);
-border-radius:12px;
-padding:12px 14px
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px 14px
 }
 
 .stat strong{
-display:block;
-font-size:22px;
-letter-spacing:-.03em
+  display:block;
+  font-size:22px;
+  letter-spacing:-.03em
 }
 
 .stat span{
-font-size:11px;
-color:var(--muted);
-font-weight:700
+  font-size:11px;
+  color:var(--muted);
+  font-weight:700
 }
 
+/* SERVICES */
+
 .servicegrid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px
 }
 
 .service{
-border:1px solid var(--border);
-border-radius:14px;
-padding:21px;
-background:#fff
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:21px;
+  background:#fff
 }
 
 .service strong{
-display:block;
-margin-bottom:6px
+  display:block;
+  margin-bottom:6px
 }
 
 .service p{
-margin:0;
-color:var(--muted);
-font-size:14px
+  margin:0;
+  color:var(--muted);
+  font-size:14px
 }
 
+/* ABOUT */
+
 .about{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:70px;
-align-items:center
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:70px;
+  align-items:center
 }
 
 .about-photo{
-border-radius:20px;
-overflow:hidden;
-border:1px solid var(--border);
-box-shadow:var(--shadow)
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--shadow)
 }
 
 .about-photo img{
-width:100%;
-display:block
+  width:100%;
+  display:block
 }
 
 .about h2{
-font-size:42px;
-line-height:1.05;
-letter-spacing:-.05em;
-margin:8px 0 18px
+  font-size:42px;
+  line-height:1.05;
+  letter-spacing:-.05em;
+  margin:8px 0 18px
 }
 
 .about p{
-color:var(--muted);
-font-size:17px
+  color:var(--muted);
+  font-size:17px
 }
 
+/* WORKFLOW */
+
 .workflow{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:10px
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px
 }
 
 .step{
-position:relative;
-padding:20px;
-border:1px solid var(--border);
-border-radius:14px;
-background:#fff
+  position:relative;
+  padding:20px;
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:#fff
 }
 
 .step b{
-display:block;
-font-size:12px;
-color:var(--accent);
-margin-bottom:8px
+  display:block;
+  font-size:12px;
+  color:var(--accent);
+  margin-bottom:8px
 }
 
 .step span{
-font-weight:800
+  font-weight:800
 }
 
-.contact{
-background:var(--dark);
-color:#fff;
-border-radius:22px;
-padding:52px
-}
-
-.contact h2{
-font-size:46px;
-letter-spacing:-.05em;
-line-height:1;
-margin:7px 0 15px
-}
-
-.contact p{
-color:#c5c9d2;
-max-width:620px
-}
-
-.contact-actions{
-display:flex;
-gap:12px;
-flex-wrap:wrap;
-margin-top:24px
-}
-
-.contact .btn.primary{
-background:#fff;
-color:var(--dark)
-}
-
-.contact .btn.secondary{
-border-color:#3a4050;
-background:transparent;
-color:#fff
-}
-
-.contact-details{
-display:flex;
-gap:25px;
-flex-wrap:wrap;
-margin-top:23px;
-color:#d7dbe4;
-font-size:14px
-}
+/* FOOTER */
 
 .footer{
-padding:34px 0;
-color:#8a91a0;
-font-size:13px;
-display:flex;
-justify-content:space-between;
-gap:20px
+  padding:34px 0;
+  color:#8a91a0;
+  font-size:13px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px
 }
 
 @media(max-width:900px){
 
-.hero,
-.featured,
-.about{
-grid-template-columns:1fr
-}
+  .hero,
+  .featured,
+  .about{
+    grid-template-columns:1fr
+  }
 
-.hero-photo{
-justify-self:start;
-width:300px
-}
+  .hero-photo{
+    justify-self:start;
+    width:300px
+  }
 
-.servicegrid{
-grid-template-columns:repeat(2,1fr)
-}
+  .servicegrid{
+    grid-template-columns:repeat(2,1fr)
+  }
 
-.workflow{
-grid-template-columns:1fr 1fr
-}
+  .workflow{
+    grid-template-columns:1fr 1fr
+  }
 
-.featured-body{
-padding:26px
-}
+  .featured-body{
+    padding:26px
+  }
 
-.navlinks{
-display:none
-}
+  .navlinks{
+    gap:18px
+  }
 
 }
 
 @media(max-width:620px){
 
-.container{
-padding:0 17px
-}
+  .container{
+    padding:0 17px
+  }
 
-.hero{
-padding:55px 0 65px;
-gap:35px
-}
+  .nav{
+    height:68px
+  }
 
-.hero h1{
-font-size:48px
-}
+  .navlinks{
+    display:none
+  }
 
-.hero p{
-font-size:17px
-}
+  .hero{
+    padding:55px 0 65px;
+    gap:35px
+  }
 
-.section{
-padding:60px 0
-}
+  .hero h1{
+    font-size:48px
+  }
 
-.section-head{
-display:block
-}
+  .hero p{
+    font-size:17px
+  }
 
-.section-head h2{
-font-size:32px
-}
+  .section{
+    padding:60px 0
+  }
 
-.grid{
-grid-template-columns:1fr
-}
+  .section-head{
+    display:block
+  }
 
-.servicegrid,
-.workflow{
-grid-template-columns:1fr
-}
+  .section-head h2{
+    font-size:32px
+  }
 
-.hero-photo{
-width:100%;
-max-width:330px
-}
+  .grid{
+    grid-template-columns:1fr
+  }
 
-.contact{
-padding:32px 24px
-}
+  .servicegrid,
+  .workflow{
+    grid-template-columns:1fr
+  }
 
-.contact h2{
-font-size:38px
-}
+  .hero-photo{
+    width:100%;
+    max-width:330px
+  }
 
-.footer{
-display:block
-}
+  .featured-body{
+    padding:24px
+  }
 
-.footer span{
-display:block;
-margin-top:8px
-}
+  .featured-body h3{
+    font-size:30px
+  }
+
+  .footer{
+    display:block
+  }
+
+  .footer span{
+    display:block;
+    margin-top:8px
+  }
 
 }
 </style>
@@ -602,12 +543,7 @@ KAMRAN TAHIR
 <a href="#work">Work</a>
 <a href="#services">Services</a>
 <a href="#about">About</a>
-<a href="#contact">Contact</a>
 </div>
-
-<a class="navcta" href="#contact">
-Hire Me
-</a>
 
 </nav>
 
@@ -634,18 +570,6 @@ I turn ideas into <span>high-impact video.</span>
 <p>
 AI-powered UGC ads, product commercials, cinematic documentaries and short-form storytelling — created with AI generation and professional editing.
 </p>
-
-<div class="buttons">
-
-<a class="btn primary" href="#work">
-View My Work ↓
-</a>
-
-<a class="btn secondary" href="#contact">
-Let's Work Together
-</a>
-
-</div>
 
 </div>
 
@@ -690,7 +614,8 @@ A selection of AI-powered commercial, advertising and storytelling work created 
 </div>
 
 
-<!-- FEATURED YOUTUBE PROJECT -->
+
+<!-- FEATURED — YOUTUBE 1 -->
 
 <div class="featured">
 
@@ -748,7 +673,6 @@ rel="noopener noreferrer"
 Watch Project →
 </a>
 
-
 </div>
 
 </div>
@@ -760,7 +684,8 @@ Watch Project →
 <div class="grid">
 
 
-<!-- UGC -->
+
+<!-- UGC AD -->
 
 <article class="card">
 
@@ -810,7 +735,7 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 
 
 
-<!-- COMMERCIAL -->
+<!-- AI COMMERCIAL -->
 
 <article class="card">
 
@@ -843,7 +768,7 @@ Cinematic AI Commercial
 </h3>
 
 <p>
-A 68-second commercial-style AI production built around cinematic product and lifestyle visuals.
+A commercial-style AI production built around cinematic product and lifestyle visuals.
 </p>
 
 <div class="meta">
@@ -910,7 +835,7 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 
 
 
-<!-- ENGINEER YOUTUBE PROJECT -->
+<!-- YOUTUBE 2 -->
 
 <article class="card">
 
@@ -935,7 +860,7 @@ The Engineer Who Legally Stole $800,000
 </h3>
 
 <p>
-Faceless humanoid AI documentary storytelling with cinematic scenes, narration and professional editing.
+Faceless AI documentary storytelling with cinematic scenes, narration and professional editing.
 </p>
 
 
@@ -974,7 +899,7 @@ Watch Project →
 
 
 
-<!-- CASINO YOUTUBE PROJECT -->
+<!-- YOUTUBE 3 -->
 
 <article class="card">
 
@@ -999,7 +924,7 @@ How a Player Used a Hidden Slot Machine Trick and Won Millions
 </h3>
 
 <p>
-A 29-minute AI-generated documentary focused on mystery, investigation and cinematic storytelling.
+A long-form AI-generated documentary focused on mystery, investigation and cinematic storytelling.
 </p>
 
 
@@ -1043,6 +968,56 @@ Watch Project →
 </article>
 
 
+
+<!-- AI HORROR -->
+
+<article class="card">
+
+<div class="media vertical">
+
+<video
+controls
+preload="metadata"
+poster="assets/ai-horror-short.jpg"
+>
+
+<source
+src="assets/ai-horror-short.mp4"
+type="video/mp4"
+>
+
+</video>
+
+</div>
+
+
+<div class="cardbody">
+
+<div class="label">
+AI SHORT FILM
+</div>
+
+<h3>
+AI Horror Story
+</h3>
+
+<p>
+A short AI-generated horror story combining atmospheric visuals, character scenes and cinematic editing.
+</p>
+
+<div class="meta">
+
+<span class="pill">Storytelling</span>
+<span class="pill">AI Generation</span>
+<span class="pill">Editing</span>
+
+</div>
+
+</div>
+
+</article>
+
+
 </div>
 
 </div>
@@ -1066,10 +1041,14 @@ What I create
 </div>
 
 <h2>
-AI video built for real clients.
+AI video built for real projects.
 </h2>
 
 </div>
+
+<p>
+Creative AI video production and professional editing for brands, creators and digital campaigns.
+</p>
 
 </div>
 
@@ -1083,7 +1062,7 @@ AI UGC & Ads
 </strong>
 
 <p>
-Scroll-stopping social ads, UGC-style content and product promotions.
+Scroll-stopping UGC-style ads, product promotions and social-first advertising content.
 </p>
 
 </div>
@@ -1135,92 +1114,9 @@ Reels, Shorts and creative AI stories designed for social platforms.
 
 
 
-<!-- CREATIVE RANGE -->
-
-<section class="section alt">
-
-<div class="container">
-
-<div class="section-head">
-
-<div>
-
-<div class="label">
-Creative range
-</div>
-
-<h2>
-Short-form AI storytelling.
-</h2>
-
-</div>
-
-<p>
-A horror short demonstrating a different visual style and narrative approach.
-</p>
-
-</div>
-
-
-<div class="grid">
-
-<article class="card">
-
-<div class="media vertical">
-
-<video
-controls
-preload="metadata"
-poster="assets/ai-horror-short.jpg"
->
-
-<source
-src="assets/ai-horror-short.mp4"
-type="video/mp4"
->
-
-</video>
-
-</div>
-
-
-<div class="cardbody">
-
-<div class="label">
-AI SHORT FILM
-</div>
-
-<h3>
-AI Horror Story
-</h3>
-
-<p>
-A ~56-second AI-generated horror story combining atmospheric visuals, character scenes and cinematic editing.
-</p>
-
-<div class="meta">
-
-<span class="pill">Storytelling</span>
-<span class="pill">AI Generation</span>
-<span class="pill">Editing</span>
-
-</div>
-
-</div>
-
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-
-
 <!-- ABOUT -->
 
-<section class="section" id="about">
+<section class="section alt" id="about">
 
 <div class="container about">
 
@@ -1245,11 +1141,11 @@ Creative production, powered by AI.
 </h2>
 
 <p>
-I'm Kamran Tahir, an AI Video Creator and Video Editor focused on turning concepts into polished, engaging videos. My work spans AI UGC advertising, product commercials, cinematic documentaries, YouTube storytelling and short-form content.
+I'm Kamran Tahir, an AI Video Creator and Video Editor focused on turning concepts into polished, engaging videos.
 </p>
 
 <p>
-I combine AI generation with editing, pacing, narration and visual storytelling to take an idea from concept to finished video.
+My work spans AI UGC advertising, product commercials, cinematic documentaries, YouTube storytelling and short-form content. I combine AI generation with editing, pacing, narration and visual storytelling to take an idea from concept to finished video.
 </p>
 
 </div>
@@ -1262,7 +1158,7 @@ I combine AI generation with editing, pacing, narration and visual storytelling 
 
 <!-- WORKFLOW -->
 
-<section class="section alt">
+<section class="section">
 
 <div class="container">
 
@@ -1279,6 +1175,10 @@ From idea to finished video.
 </h2>
 
 </div>
+
+<p>
+A streamlined AI production workflow focused on quality, consistency and professional presentation.
+</p>
 
 </div>
 
@@ -1308,68 +1208,6 @@ From idea to finished video.
 <div class="step">
 <b>05</b>
 <span>Final Delivery</span>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section class="section" id="contact">
-
-<div class="container">
-
-<div class="contact">
-
-<div class="label">
-Let's work together
-</div>
-
-<h2>
-Have an idea? Let's turn it into video.
-</h2>
-
-<p>
-Looking for AI UGC ads, product commercials, YouTube documentaries or creative short-form content? Get in touch and tell me what you need.
-</p>
-
-
-<div class="contact-actions">
-
-<a
-class="btn primary"
-href="https://wa.me/923340811117"
-target="_blank"
-rel="noopener noreferrer"
->
-WhatsApp Me
-</a>
-
-<a
-class="btn secondary"
-href="mailto:Kamran.tahir11@gmail.com"
->
-Email Me
-</a>
-
-</div>
-
-
-<div class="contact-details">
-
-<span>
-WhatsApp: +92 334 0811117
-</span>
-
-<span>
-Email: Kamran.tahir11@gmail.com
-</span>
-
 </div>
 
 </div>
