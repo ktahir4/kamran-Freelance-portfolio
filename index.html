@@ -9,6 +9,7 @@
 <title>Kamran Tahir — AI Video Creator & Video Editor</title>
 
 <style>
+
 :root{
   --bg:#fff;
   --surface:#f8f8fb;
@@ -255,7 +256,63 @@ a{
   color:var(--accent2)
 }
 
-/* FEATURED YOUTUBE PROJECT */
+
+/* =========================================================
+   VITALYZE FEATURED PROJECT
+   ========================================================= */
+
+.featured-vitalyze{
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow)
+}
+
+.vitalyze-media{
+  background:#111;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:520px
+}
+
+.vitalyze-media video{
+  width:100%;
+  height:100%;
+  max-height:650px;
+  display:block;
+  object-fit:contain;
+  background:#111
+}
+
+.featured-vitalyze .featured-body{
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center
+}
+
+.featured-vitalyze .featured-body h3{
+  font-size:34px;
+  line-height:1.08;
+  letter-spacing:-.045em;
+  margin:8px 0 14px
+}
+
+.featured-vitalyze .featured-body p{
+  color:var(--muted);
+  font-size:16px
+}
+
+
+/* =========================================================
+   FEATURED YOUTUBE PROJECT
+   ========================================================= */
 
 .featured{
   display:grid;
@@ -276,11 +333,12 @@ a{
 }
 
 /*
-  IMPORTANT:
   YouTube thumbnails are 16:9.
-  Cover fills the entire thumbnail area and removes
-  the black bars caused by object-fit:contain.
+  The uploaded thumbnail assets are used directly.
+  object-fit:cover fills the complete thumbnail area
+  and prevents black bars.
 */
+
 .featured .thumb img{
   width:100%;
   height:100%;
@@ -334,7 +392,10 @@ a{
   font-weight:700
 }
 
-/* SERVICES */
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
 
 .servicegrid{
   display:grid;
@@ -360,7 +421,10 @@ a{
   font-size:14px
 }
 
-/* ABOUT */
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about{
   display:grid;
@@ -393,7 +457,10 @@ a{
   font-size:17px
 }
 
-/* WORKFLOW */
+
+/* =========================================================
+   WORKFLOW
+   ========================================================= */
 
 .workflow{
   display:grid;
@@ -420,7 +487,10 @@ a{
   font-weight:800
 }
 
-/* FOOTER */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .footer{
   padding:34px 0;
@@ -431,10 +501,16 @@ a{
   gap:20px
 }
 
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
 @media(max-width:900px){
 
   .hero,
   .featured,
+  .featured-vitalyze,
   .about{
     grid-template-columns:1fr
   }
@@ -452,14 +528,26 @@ a{
     grid-template-columns:1fr 1fr
   }
 
-  .featured-body{
+  .featured-body,
+  .featured-vitalyze .featured-body{
     padding:26px
+  }
+
+  .vitalyze-media{
+    min-height:0;
+    max-height:650px
+  }
+
+  .vitalyze-media video{
+    max-height:650px
   }
 
   .navlinks{
     gap:18px
   }
+
 }
+
 
 @media(max-width:620px){
 
@@ -514,12 +602,27 @@ a{
     max-width:330px
   }
 
-  .featured-body{
+  .featured-body,
+  .featured-vitalyze .featured-body{
     padding:24px
   }
 
-  .featured-body h3{
+  .featured-body h3,
+  .featured-vitalyze .featured-body h3{
     font-size:30px
+  }
+
+  .vitalyze-media{
+    min-height:0;
+    max-height:none
+  }
+
+  .vitalyze-media video{
+    width:100%;
+    height:auto;
+    max-height:none;
+    aspect-ratio:9/16;
+    object-fit:contain
   }
 
   .footer{
@@ -530,13 +633,17 @@ a{
     display:block;
     margin-top:8px
   }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
+
 <nav class="nav">
 
 <a class="brand" href="#top">
@@ -550,11 +657,16 @@ KAMRAN TAHIR
 </div>
 
 </nav>
+
 </div>
+
 
 <main id="top">
 
-<!-- HERO -->
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
 <section class="container hero">
 
@@ -574,21 +686,28 @@ AI-powered UGC ads, product commercials, cinematic documentaries and short-form 
 
 </div>
 
+
 <div class="hero-photo">
+
 <img
 src="assets/kamran-profile-crop.jpg"
 alt="Kamran Tahir — AI Video Creator and Video Editor"
 >
+
 </div>
 
 </section>
 
 
-<!-- WORK -->
+
+<!-- =====================================================
+     SELECTED WORK
+     ===================================================== -->
 
 <section class="section alt" id="work">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -611,9 +730,74 @@ A selection of AI-powered commercial, advertising and storytelling work created 
 </div>
 
 
-<!-- FEATURED YOUTUBE 1 -->
+
+<!-- =====================================================
+     NEW FEATURED VITALYZE PROJECT
+     ===================================================== -->
+
+<div class="featured-vitalyze">
+
+
+<div class="vitalyze-media">
+
+<video
+controls
+preload="metadata"
+poster="assets/vitalyze-3pm.jpg"
+playsinline
+>
+
+<source
+src="assets/vitalyze-3pm.mp4"
+type="video/mp4"
+>
+
+Your browser does not support the video tag.
+
+</video>
+
+</div>
+
+
+<div class="featured-body">
+
+<div class="label">
+Featured • AI UGC Advertisement
+</div>
+
+<h3>
+The 3 PM Slump — VITALYZE Hydration
+</h3>
+
+<p>
+A conversational AI UGC hydration ad built around a relatable afternoon-slump problem, personal routine and natural product demonstration. Designed to feel authentic, social-first and creator-led rather than like a traditional commercial.
+</p>
+
+<div class="meta">
+
+<span class="pill">AI UGC</span>
+<span class="pill">Product Ad</span>
+<span class="pill">Veo</span>
+<span class="pill">Short-form</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div style="height:24px"></div>
+
+
+
+<!-- =====================================================
+     FEATURED YOUTUBE PROJECT
+     ===================================================== -->
 
 <div class="featured">
+
 
 <div class="thumb">
 
@@ -639,24 +823,34 @@ The Great Las Vegas Heist
 A long-form AI-assisted true-crime documentary about the $3.1 million Las Vegas armored-car heist. Built around cinematic AI visuals, storytelling, narration and professional editing.
 </p>
 
+
 <div class="stats">
 
 <div class="stat">
+
 <strong>429K+</strong>
 <span>VIEWS</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>42.2K</strong>
 <span>WATCH HOURS</span>
+
 </div>
+
 
 <div class="stat">
+
 <strong>841+</strong>
 <span>SUBSCRIBERS</span>
+
 </div>
 
 </div>
+
 
 <a
 class="link"
@@ -672,13 +866,17 @@ Watch Project →
 </div>
 
 
+
 <div style="height:24px"></div>
+
 
 
 <div class="grid">
 
 
-<!-- UGC AD -->
+<!-- =====================================================
+     UGC AD
+     ===================================================== -->
 
 <article class="card">
 
@@ -688,6 +886,7 @@ Watch Project →
 controls
 preload="metadata"
 poster="assets/ugc-ad.jpg"
+playsinline
 >
 
 <source
@@ -698,6 +897,7 @@ type="video/mp4"
 </video>
 
 </div>
+
 
 <div class="cardbody">
 
@@ -713,6 +913,7 @@ AI UGC Product Ad
 Short-form AI UGC advertising created for social-first product promotion, combining generated visuals, performance and professional editing.
 </p>
 
+
 <div class="meta">
 
 <span class="pill">UGC Ads</span>
@@ -726,7 +927,10 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 </article>
 
 
-<!-- AI COMMERCIAL -->
+
+<!-- =====================================================
+     AI COMMERCIAL
+     ===================================================== -->
 
 <article class="card">
 
@@ -736,6 +940,7 @@ Short-form AI UGC advertising created for social-first product promotion, combin
 controls
 preload="metadata"
 poster="assets/ai-commercial-ad.jpg"
+playsinline
 >
 
 <source
@@ -746,6 +951,7 @@ type="video/mp4"
 </video>
 
 </div>
+
 
 <div class="cardbody">
 
@@ -761,6 +967,7 @@ Cinematic AI Commercial
 A commercial-style AI production built around cinematic product and lifestyle visuals.
 </p>
 
+
 <div class="meta">
 
 <span class="pill">Product Ads</span>
@@ -774,7 +981,10 @@ A commercial-style AI production built around cinematic product and lifestyle vi
 </article>
 
 
-<!-- MUSIC VIDEO -->
+
+<!-- =====================================================
+     MUSIC VIDEO
+     ===================================================== -->
 
 <article class="card">
 
@@ -784,6 +994,7 @@ A commercial-style AI production built around cinematic product and lifestyle vi
 controls
 preload="metadata"
 poster="assets/music-video-ad.jpg"
+playsinline
 >
 
 <source
@@ -794,6 +1005,7 @@ type="video/mp4"
 </video>
 
 </div>
+
 
 <div class="cardbody">
 
@@ -809,6 +1021,7 @@ AI Music Video Advertisement
 A cinematic AI-generated music video advertisement combining AI characters, lifestyle visuals, dynamic camera work and professional editing.
 </p>
 
+
 <div class="meta">
 
 <span class="pill">AI Video</span>
@@ -822,7 +1035,10 @@ A cinematic AI-generated music video advertisement combining AI characters, life
 </article>
 
 
-<!-- YOUTUBE 2 -->
+
+<!-- =====================================================
+     YOUTUBE — PUDDING
+     ===================================================== -->
 
 <article class="card">
 
@@ -834,6 +1050,7 @@ alt="The Engineer Who Legally Stole $800,000"
 >
 
 </div>
+
 
 <div class="cardbody">
 
@@ -849,24 +1066,34 @@ The Engineer Who Legally Stole $800,000
 Faceless AI documentary storytelling with cinematic scenes, narration and professional editing.
 </p>
 
+
 <div class="stats">
 
 <div class="stat">
+
 <strong>114K+</strong>
 <span>VIEWS</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>7.8K</strong>
 <span>WATCH HOURS</span>
+
 </div>
+
 
 <div class="stat">
+
 <strong>200+</strong>
 <span>SUBSCRIBERS</span>
+
 </div>
 
 </div>
+
 
 <a
 class="link"
@@ -882,7 +1109,10 @@ Watch Project →
 </article>
 
 
-<!-- YOUTUBE 3 -->
+
+<!-- =====================================================
+     YOUTUBE — CASINO
+     ===================================================== -->
 
 <article class="card">
 
@@ -894,6 +1124,7 @@ alt="Hidden slot machine trick documentary"
 >
 
 </div>
+
 
 <div class="cardbody">
 
@@ -909,6 +1140,7 @@ How a Player Used a Hidden Slot Machine Trick and Won Millions
 A long-form AI-generated documentary focused on mystery, investigation and cinematic storytelling.
 </p>
 
+
 <div class="stats">
 
 <div class="stat">
@@ -918,12 +1150,14 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 
 </div>
 
+
 <div class="stat">
 
 <strong>3.8K</strong>
 <span>WATCH HOURS</span>
 
 </div>
+
 
 <div class="stat">
 
@@ -933,6 +1167,7 @@ A long-form AI-generated documentary focused on mystery, investigation and cinem
 </div>
 
 </div>
+
 
 <a
 class="link"
@@ -948,7 +1183,10 @@ Watch Project →
 </article>
 
 
-<!-- AI HORROR -->
+
+<!-- =====================================================
+     AI HORROR
+     ===================================================== -->
 
 <article class="card">
 
@@ -958,6 +1196,7 @@ Watch Project →
 controls
 preload="metadata"
 poster="assets/ai-horror-short.jpg"
+playsinline
 >
 
 <source
@@ -968,6 +1207,7 @@ type="video/mp4"
 </video>
 
 </div>
+
 
 <div class="cardbody">
 
@@ -983,6 +1223,7 @@ AI Horror Story
 A short AI-generated horror story combining atmospheric visuals, character scenes and cinematic editing.
 </p>
 
+
 <div class="meta">
 
 <span class="pill">Storytelling</span>
@@ -997,16 +1238,21 @@ A short AI-generated horror story combining atmospheric visuals, character scene
 
 
 </div>
+
 </div>
 
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- =====================================================
+     SERVICES
+     ===================================================== -->
 
 <section class="section" id="services">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1030,6 +1276,7 @@ Creative AI video production and professional editing for brands, creators and d
 
 
 <div class="servicegrid">
+
 
 <div class="service">
 
@@ -1082,6 +1329,7 @@ Reels, Shorts and creative AI stories designed for social platforms.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1089,11 +1337,15 @@ Reels, Shorts and creative AI stories designed for social platforms.
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
 
 <section class="section alt" id="about">
 
 <div class="container about">
+
 
 <div class="about-photo">
 
@@ -1130,11 +1382,15 @@ My work spans AI UGC advertising, product commercials, cinematic documentaries, 
 </section>
 
 
-<!-- WORKFLOW -->
+
+<!-- =====================================================
+     WORKFLOW
+     ===================================================== -->
 
 <section class="section">
 
 <div class="container">
+
 
 <div class="section-head">
 
@@ -1159,30 +1415,36 @@ A streamlined AI production workflow focused on quality, consistency and profess
 
 <div class="workflow">
 
+
 <div class="step">
 <b>01</b>
 <span>Concept</span>
 </div>
+
 
 <div class="step">
 <b>02</b>
 <span>AI Generation</span>
 </div>
 
+
 <div class="step">
 <b>03</b>
 <span>Voice & Story</span>
 </div>
+
 
 <div class="step">
 <b>04</b>
 <span>Editing</span>
 </div>
 
+
 <div class="step">
 <b>05</b>
 <span>Final Delivery</span>
 </div>
+
 
 </div>
 
@@ -1192,6 +1454,7 @@ A streamlined AI production workflow focused on quality, consistency and profess
 
 
 </main>
+
 
 
 <div class="container">
